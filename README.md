@@ -6,7 +6,7 @@ Add Library In Your Project
 -----------
 Add this line in `dependencies`
 ~~~
-compile 'com.github.hakansrndk60:BasicPref:0.0.1'
+compile 'com.github.hakansrndk60:BasicPref:0.0.2'
 ~~~
 
 # Usage
