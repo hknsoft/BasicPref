@@ -19,6 +19,11 @@ BasicPref basicPref = new BasicPref(context);
 ~~~
 Only needs to be installed once for a Activity.
 
+Example:
+~~~
+BasicPref basicPref = new BasicPref(MainActivity.this);
+~~~
+
 Saving Data
 -----------
 You can save data with this methods:
