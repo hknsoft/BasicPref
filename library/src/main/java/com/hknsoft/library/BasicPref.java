@@ -26,6 +26,13 @@ public class BasicPref {
         edit.apply();
     }
 
+    public void setFloat(String key, Float value) {
+        SharedPreferences sharedPref = activity_context.getSharedPreferences(activity_context.getPackageName(), Context.MODE_PRIVATE);
+        SharedPreferences.Editor edit = sharedPref.edit();
+        edit.putFloat(key, value);
+        edit.apply();
+    }
+
     public void setBoolean(String key, Boolean value) {
         SharedPreferences sharedPref = activity_context.getSharedPreferences(activity_context.getPackageName(), Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = sharedPref.edit();
@@ -39,6 +46,10 @@ public class BasicPref {
 
     public Integer getInt(String key, Integer defaultValue) {
         return activity_context.getSharedPreferences(activity_context.getPackageName(), Context.MODE_PRIVATE).getInt(key, defaultValue);
+    }
+
+    public Float getFloat(String key, Float defaultValue) {
+        return activity_context.getSharedPreferences(activity_context.getPackageName(), Context.MODE_PRIVATE).getFloat(key, defaultValue);
     }
 
     public Boolean getBoolean(String key, Boolean defaultValue) {
