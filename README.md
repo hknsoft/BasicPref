@@ -4,7 +4,7 @@ Small library for handling SharedPreferences.<br>
 
 Add Library In Your Project
 -----------
-Add this line in `dependencies`.
+Add this line in `dependencies`
 ~~~
 compile 'com.github.hakansrndk60:BasicPref:0.0.1'
 ~~~
