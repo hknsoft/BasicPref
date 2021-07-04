@@ -1,5 +1,5 @@
 # BasicPref
-Small library for handling SharedPreferences.
+Small library for handling SharedPreferences.\n
 `This library is made to make data management easier for android programming beginners.`
 
 Add Library In Your Project
