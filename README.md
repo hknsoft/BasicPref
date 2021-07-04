@@ -60,4 +60,4 @@ Float value = basicPref.getFloat("key", 3f);
 Boolean value = basicPref.getBoolean("key", false);
 ~~~
 
-<strong>© 2020 <a href="https://hknsoft.com/">hknsoft</a></strong>
+<strong>© 2021 <a href="https://hknsoft.com/">hknsoft</a></strong>
