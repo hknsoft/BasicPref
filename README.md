@@ -1,5 +1,6 @@
 # BasicPref
 Small library for handling SharedPreferences.
+`This library is made to make data management easier for android programming beginners.`
 
 Add Library In Your Project
 -----------
@@ -16,7 +17,7 @@ You can create `BasicPref` object in the follow this way:
 ~~~
 BasicPref basicPref = new BasicPref(context);
 ~~~
-Needs to be installed once for a Activity.
+Only needs to be installed once for a Activity.
 
 Saving Data
 -----------
