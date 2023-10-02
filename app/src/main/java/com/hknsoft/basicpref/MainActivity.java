@@ -3,24 +3,36 @@ package com.hknsoft.basicpref;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
-
-import com.hknsoft.library.BasicPref;
-
-import org.json.JSONObject;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView textView;
+    private EditText editText;
+    private Button buttonSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BasicPref basicPref = new BasicPref(MainActivity.this);
+        textView = findViewById(R.id.textview);
+        editText = findViewById(R.id.edittext);
+        buttonSave = findViewById(R.id.button_save);
 
-        String jsonAsString = "{\"name\":\"sonoo\",\"salary\":600000.0,\"age\":27}";
-        basicPref.setJSONObject("key1", jsonAsString);
+        BasicPref basicPref = BasicPref.getInstance(MainActivity.this);
 
-        Log.d("test", basicPref.getJSONObject("key1", "default").toString());
+        buttonSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = editText.getText().toString().trim();
+                basicPref.setString("name", name);
+
+                String retrievedName = basicPref.getString("name", "Jack");
+                textView.setText(retrievedName);
+            }
+        });
     }
 }

@@ -1,87 +1,64 @@
 # BasicPref
-Small library for handling SharedPreferences.<br>
-`This library is made to make data management easier for android programming beginners.`
 
-Add Library In Your Project
------------
+A powerful library for handling SharedPreferences.
+
+-----------------------------------------
+
+### Dokümantasyon
+
+* [Dokümantasyon](#dokümantasyon)
+* [Add Library In Your Project](#add-library-in-your-project)
+* [Store Data](#store-data)
+* [Retrieve Data](#retrieve-data)
+* [Remove And Clear](#remove-and-clear)
+
+-----------------------------------------
+
+### Add Library In Your Project
+
 Add this line in `dependencies`
+
 ~~~
-implementation 'com.github.hakansrndk60:BasicPref:0.0.3'
+implementation 'com.github.hakansrndk60:BasicPref:1.0.4'
 ~~~
 
-# Usage
+-----------------------------------------
 
-Creating BasicPref Object
------------
-You can create `BasicPref` object in the follow this way:
-```java
-BasicPref basicPref = new BasicPref(context);
-```
-Only needs to be installed once for a Activity.
+### Store Data
 
-Example:
 ```java
-BasicPref basicPref = new BasicPref(MainActivity.this);
-```
+BasicPref basicPref = BasicPref.getInstance(MainActivity.this);
 
-Saving Data
------------
-You can save data with this methods:
-```java
-basicPref.setString(key, value);
-basicPref.setInt(key, value);
-basicPref.setFloat(key, value);
-basicPref.setBoolean(key, value);
-basicPref.setJSONObject(key, value);
-basicPref.setJSONArray(key, value);
-```
-
-Examples:
-```java
-basicPref.setString("key", "string there");
-basicPref.setInt("key", 1);
-basicPref.setFloat("key", 5f);
 basicPref.setBoolean("key", true);
-basicPref.setJSONObject("key", "json object as string");
-basicPref.setJSONArray("key", "json array as string");
+basicPref.setFloat("key", 2.4F);
+basicPref.setInt("key", 114);
+basicPref.setLong("key", 1.970L);
+basicPref.setString("key", "Jack");
+basicPref.setObject("key", new ExampleObject());
 ```
 
-Reading Data
------------
-You can read & get data with this methods:
+-----------------------------------------
+
+### Retrieve Data
+
 ```java
-String data = basicPref.getString(key, defaultValue);
-Integer data = basicPref.getInt(key, defaultValue);
-Float data = basicPref.getFloat(key, defaultValue);
-Boolean data = basicPref.getBoolean(key, defaultValue);
-JSONObject data = basicPref.getJSONObject(key, defaultValue);
-JSONArray data = basicPref.getJSONArray(key, defaultValue);
+BasicPref basicPref = BasicPref.getInstance(MainActivity.this);
+
+basicPref.getBoolean("key", false);
+basicPref.getFloat("key", 0F);
+basicPref.getInt("key", 0);
+basicPref.getLong("key", 0L);
+basicPref.getString("key", "Default");
+basicPref.getObject("key", new ExampleObject());
 ```
 
-Examples:
+-----------------------------------------
+
+### Remove And Clear
+
 ```java
-String data = basicPref.getString("key", "if not signed this string show up");
-Integer data = basicPref.getInt("key", 0);
-Float data = basicPref.getFloat("key", 3f);
-Boolean data = basicPref.getBoolean("key", false);
-JSONObject data = basicPref.getJSONObject("key", "default json object as string");
-JSONArray data = basicPref.getJSONArray("key", "default json array as string");
+BasicPref basicPref = BasicPref.getInstance(MainActivity.this);
+
+basicPref.remove("key"); // Remove value stored with key.
+basicPref.clear(); // Removes all values.
 ```
-
-License
------------
-~~~
-Copyright (C) 2022, hknsoft
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-     http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-~~~
