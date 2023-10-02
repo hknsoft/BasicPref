@@ -4,9 +4,8 @@ A powerful library for handling SharedPreferences.
 
 -----------------------------------------
 
-### Dokümantasyon
+### Documentation
 
-* [Dokümantasyon](#dokümantasyon)
 * [Add Library In Your Project](#add-library-in-your-project)
 * [Store Data](#store-data)
 * [Retrieve Data](#retrieve-data)
