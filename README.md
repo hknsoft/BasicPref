@@ -19,7 +19,7 @@ A powerful library for handling SharedPreferences.
 Add this line in `dependencies`
 
 ~~~
-implementation 'com.github.hakansrndk60:BasicPref:1.0.4'
+implementation 'com.github.hknsoft:BasicPref:1.0.4'
 ~~~
 
 -----------------------------------------
