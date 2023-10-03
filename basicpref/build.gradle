@@ -36,15 +36,15 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.findByName('release')
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.hknsoft'
+            artifactId = 'BasicPref'
+            version = '1.0.4'
 
-                groupId = 'com.github.hknsoft'
-                artifactId = 'BasicPref'
-                version = '1.0.4'
+            afterEvaluate {
+                from components.findByName('release')
             }
         }
     }
